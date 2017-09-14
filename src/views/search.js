@@ -13,7 +13,7 @@ var SearchView = Backbone.View.extend({
 
   events: {
     'click .btn': 'search',
-    'keyup' : 'keypressed'
+    'keyup': 'keypressed'
   },
 
   search: function(e) {
