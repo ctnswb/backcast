@@ -22,7 +22,6 @@ var Videos = Backbone.Collection.extend({
 
   parse: function(response) {
     this.set(response.items);
-    this.at(0).select();
     this.trigger('searching', this);
     return response.items;
   }

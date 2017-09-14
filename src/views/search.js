@@ -12,11 +12,18 @@ var SearchView = Backbone.View.extend({
   },
 
   events: {
-    'click .btn': 'search'
+    'click .btn': 'search',
+    'keyup' : 'keypressed'
   },
 
   search: function(e) {
     this.collection.search(this.$el.find('input').val());
+  },
+
+  keypressed: function(e) {
+    if (e.which === 13) {
+      this.search();
+    }
   },
 
   template: templateURL('src/templates/search.html')
